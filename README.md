@@ -12,6 +12,7 @@ smoke test with aws codebuild, codepipeline and codedeploy, so later we could kn
 
 Create a CodeBuild Service Role: https://docs.aws.amazon.com/codebuild/latest/userguide/setting-up.html#setting-up-service-role
 
+Tutorial: Create a Four-Stage Pipeline: https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-four-stage-pipeline.html
 
 #### Deploy 
 
@@ -35,4 +36,5 @@ Create a CodeBuild Service Role: https://docs.aws.amazon.com/codebuild/latest/us
 cd pipeline
 aws cloudformation create-stack --stack-name aws-sam-hello-pipeline --template-body file://pipeline.yaml --capabilities CAPABILITY_IAM 
 ```
+
 
