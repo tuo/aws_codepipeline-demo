@@ -13,7 +13,7 @@ smoke test with aws codebuild, codepipeline and codedeploy, so later we could kn
 Create a CodeBuild Service Role: https://docs.aws.amazon.com/codebuild/latest/userguide/setting-up.html#setting-up-service-role
 
 
-######### DEPLOY FIRST YOUR SACK First
+#### Deploy 
 
  
 
@@ -29,4 +29,10 @@ Create a CodeBuild Service Role: https://docs.aws.amazon.com/codebuild/latest/us
    
          sam deploy --template-file packaged.yaml --region ap-northeast-1 --capabilities CAPABILITY_IAM --stack-name aws-sam-hello  --s3-bucket tuo-i18n-serverless-artifact --confirm-changeset
 
+##### Deploy Pipeline
+
+```
+cd pipeline
+aws cloudformation create-stack --stack-name aws-sam-hello-pipeline --template-body file://pipeline.yaml --capabilities CAPABILITY_IAM 
+```
 

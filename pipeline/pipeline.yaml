@@ -176,39 +176,7 @@ Resources:
                         ChangeSetName: aws-sam-hello-pipeline-ChangeSet-Beta
                       OutputArtifacts:
                         - Name: aws-sam-hello-pipelineBetaChangeSet
-                      RunOrder: 2
-                - Name: Gamma
-                  Actions:
-                    - Name: CreateChangeSet
-                      ActionTypeId:
-                        Category: Deploy
-                        Owner: AWS
-                        Provider: CloudFormation
-                        Version: "1"
-                      Configuration:
-                        ActionMode: CHANGE_SET_REPLACE
-                        RoleArn: !GetAtt CloudFormationExecutionRole.Arn
-                        StackName: aws-sam-hello-pipeline-Gamma
-                        ChangeSetName: aws-sam-hello-pipeline-ChangeSet-Gamma
-                        TemplatePath: BuildArtifactAsZip::packaged.yaml
-                        Capabilities: CAPABILITY_IAM
-                      InputArtifacts:
-                        - Name: BuildArtifactAsZip
-                      RunOrder: 1
-                    - Name: ExecuteChangeSet
-                      ActionTypeId:
-                        Category: Deploy
-                        Owner: AWS
-                        Provider: CloudFormation
-                        Version: "1"
-                      Configuration:
-                        ActionMode: CHANGE_SET_EXECUTE
-                        RoleArn: !GetAtt CloudFormationExecutionRole.Arn
-                        StackName: aws-sam-hello-pipeline-Gamma
-                        ChangeSetName: aws-sam-hello-pipeline-ChangeSet-Gamma
-                      OutputArtifacts:
-                        - Name: aws-sam-hello-pipelineGammaChangeSet
-                      RunOrder: 2
+                      RunOrder: 2              
                 - Name: Prod
                   Actions:
                     - Name: DeploymentApproval
