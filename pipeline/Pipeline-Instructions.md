@@ -16,7 +16,9 @@ This Pipeline is configured to look up for GitHub information stored on [EC2 Sys
 
 Replace the placeholders with values corresponding to your GitHub Repo and Token:
 
+
 ```bash
+
 aws ssm put-parameter \
     --name "/service/aws-sam-hello-pipeline/github/repo" \
     --description "Github Repository name for Cloudformation Stack aws-sam-hello-pipeline-pipeline" \
@@ -34,6 +36,8 @@ aws ssm put-parameter \
     --description "Github Username for Cloudformation Stack aws-sam-hello-pipeline-pipeline" \
     --type "String" \
     --value "tuo"
+
+    
 ```
 
 **NOTE:** Keep in mind that these Parameters will only be available within the same region you're deploying this Pipeline stack. Also, if these values ever change you will need to [update these parameters](https://docs.aws.amazon.com/cli/latest/reference/ssm/put-parameter.html) as well as update the "aws-sam-hello-pipeline-pipeline" Cloudformation stack.
