@@ -5,16 +5,16 @@ smoke test with aws codebuild, codepipeline and codedeploy, so later we could kn
 
 
 
-###### Use CodePipeline with CodeBuild to Test Code and Run Builds [https://docs.aws.amazon.com/codebuild/latest/userguide/how-to-create-pipeline.html](https://docs.aws.amazon.com/codebuild/latest/userguide/how-to-create-pipeline.html)
+`Use CodePipeline with CodeBuild to Test Code and Run Builds`: [https://docs.aws.amazon.com/codebuild/latest/userguide/how-to-create-pipeline.html](https://docs.aws.amazon.com/codebuild/latest/userguide/how-to-create-pipeline.html)
 
-###### Use AWS CodeBuild with Jenkins ![https://docs.aws.amazon.com/codebuild/latest/userguide/jenkins-plugin.html](https://docs.aws.amazon.com/codebuild/latest/userguide/jenkins-plugin.html)
+`AWS CodeBuild with Jenkins`: [https://docs.aws.amazon.com/codebuild/latest/userguide/jenkins-plugin.html](https://docs.aws.amazon.com/codebuild/latest/userguide/jenkins-plugin.html)
 
 
 Create a CodeBuild Service Role: https://docs.aws.amazon.com/codebuild/latest/userguide/setting-up.html#setting-up-service-role
 
 Tutorial: Create a Four-Stage Pipeline: https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-four-stage-pipeline.html
 
-#### Deploy 
+## Deploy 
 
  
 
@@ -30,7 +30,7 @@ Tutorial: Create a Four-Stage Pipeline: https://docs.aws.amazon.com/codepipeline
    
          sam deploy --template-file packaged.yaml --region ap-northeast-1 --capabilities CAPABILITY_IAM --stack-name aws-sam-hello  --s3-bucket tuo-i18n-serverless-artifact --confirm-changeset
 
-##### Deploy Pipeline
+## Deploy Pipeline
 
 ```
 cd pipeline
@@ -39,7 +39,7 @@ aws cloudformation create-stack --stack-name aws-sam-hello-pipeline --template-b
 
 
 
-##### TODO:
+## TODO:
 
 
 https://amazonaws-china.com/blogs/devops/building-and-testing-polyglot-applications-using-aws-codebuild/
