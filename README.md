@@ -49,8 +49,8 @@ https://stackoverflow.com/questions/53987204/is-it-possible-recommended-to-use-s
 
 1. lint your code
 2. run unit test before build
-3. sam build on build stage
-4. sam package in post build
+3. sam build on build stage (no need run against container)
+4. sam package in post build 
  
      
 
