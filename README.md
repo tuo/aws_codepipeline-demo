@@ -38,3 +38,19 @@ aws cloudformation create-stack --stack-name aws-sam-hello-pipeline --template-b
 ```
 
 
+
+##### TODO:
+
+
+https://amazonaws-china.com/blogs/devops/building-and-testing-polyglot-applications-using-aws-codebuild/
+
+https://stackoverflow.com/questions/53987204/is-it-possible-recommended-to-use-sam-build-in-aws-codebuild
+
+
+1. lint your code
+2. run unit test before build
+3. sam build on build stage
+4. sam package in post build
+ 
+     
+
