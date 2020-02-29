@@ -14,15 +14,17 @@ version: 0.2
 #     key: "value"
 #     key: "value"
 
+
+
 phases:
   install:
-    commands:
-      # Use Install phase to install packages or any pre-reqs you may need throughout the build (e.g. dev deps, security checks, etc.)
-      - echo "[Install phase]"
-  pre_build:
-    commands:
+    runtime-versions:
+      python: 3.8    
+  pre_build:    
+    commands:      
       # Use Pre-Build phase to run tests, install any code deps or any other customization before build
       - echo "[Pre-Build phase]"
+      - python --version      
       - echo $BUILD_OUTPUT_BUCKET
   build:
     commands:
