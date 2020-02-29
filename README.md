@@ -15,6 +15,13 @@ smoke test with aws codebuild, codepipeline and codedeploy, so later we could kn
 `Tutorial: Create a Four-Stage Pipeline`: [https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-four-stage-pipeline.html](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-four-stage-pipeline.html)
 
 `AWS re:Invent blog`: [https://amazonaws-china.com/blogs/aws/category/events/reinvent/](https://amazonaws-china.com/blogs/aws/category/events/reinvent/) 
+
+`AWS Serverless CI/CD for the enterprise on the AWS Cloud`: [https://github.com/aws-quickstart/quickstart-trek10-serverless-enterprise-cicd](https://github.com/aws-quickstart/quickstart-trek10-serverless-enterprise-cicd)
+
+`Implementing safe AWS Lambda deployments with AWS CodeDeploy`: https://amazonaws-china.com/blogs/compute/implementing-safe-aws-lambda-deployments-with-aws-codedeploy/
+
+https://docs.aws.amazon.com/codedeploy/latest/userguide/tutorial-lambda-sam.html
+
 ## Deploy 
 
  
