@@ -1,18 +1,18 @@
-# AWS SAM Codepipeline
+# AWS SAM CodeBuild & CodeDeploy & Jenkins
 
 smoke test with aws codebuild, codepipeline and codedeploy, so later we could know how to migrate to AWS China with jenkins orchestrating with codebuild/codedeploy since Codepipeline is missing in China region.
 
 
-
+---
 
 `Use CodePipeline with CodeBuild to Test Code and Run Builds`: [https://docs.aws.amazon.com/codebuild/latest/userguide/how-to-create-pipeline.html](https://docs.aws.amazon.com/codebuild/latest/userguide/how-to-create-pipeline.html)
 
 `AWS CodeBuild with Jenkins`: [https://docs.aws.amazon.com/codebuild/latest/userguide/jenkins-plugin.html](https://docs.aws.amazon.com/codebuild/latest/userguide/jenkins-plugin.html)
 
 
-Create a CodeBuild Service Role: https://docs.aws.amazon.com/codebuild/latest/userguide/setting-up.html#setting-up-service-role
+`Create a CodeBuild Service Role`: [https://docs.aws.amazon.com/codebuild/latest/userguide/setting-up.html#setting-up-service-role](https://docs.aws.amazon.com/codebuild/latest/userguide/setting-up.html#setting-up-service-role)
 
-Tutorial: Create a Four-Stage Pipeline: https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-four-stage-pipeline.html
+`Tutorial: Create a Four-Stage Pipeline`: [https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-four-stage-pipeline.html](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-four-stage-pipeline.html)
 
 ## Deploy 
 
