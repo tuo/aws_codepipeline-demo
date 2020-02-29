@@ -54,3 +54,6 @@ https://stackoverflow.com/questions/53987204/is-it-possible-recommended-to-use-s
  
      
 
+![codebuild_phases.png](./screenshots/codebuild_phases.png)
+![jenkins](./screenshots/jenkins.png)
+![codebuild_log.png](./screenshots/codebuild_log.png)
