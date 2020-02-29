@@ -14,6 +14,7 @@ smoke test with aws codebuild, codepipeline and codedeploy, so later we could kn
 
 `Tutorial: Create a Four-Stage Pipeline`: [https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-four-stage-pipeline.html](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-four-stage-pipeline.html)
 
+`AWS re:Invent blog`: [https://amazonaws-china.com/blogs/aws/category/events/reinvent/](https://amazonaws-china.com/blogs/aws/category/events/reinvent/) 
 ## Deploy 
 
  
