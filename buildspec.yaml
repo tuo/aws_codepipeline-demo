@@ -44,7 +44,7 @@ phases:
     commands:
       # Use Post Build for notifications, git tags and any further customization after build
       - echo "[Post-Build phase] Packaging..."
-      - sam package --template-file template.yaml --s3-bucket codepipeline-artifacts --output-template-file packaged.yaml 
+      - sam package --template-file template.yaml --s3-bucket codepipeline-artifacts-output --output-template-file packaged.yaml 
       - echo "SAM packaging completed on `date`"
 
 ##################################
