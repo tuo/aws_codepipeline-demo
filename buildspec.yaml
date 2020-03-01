@@ -23,6 +23,9 @@ phases:
     commands:    
       - echo "Pre-Build Phase started - SAM Deployment"      
       - sam --version # verify "sam" can now be called        
+      - echo $CODEBUILD_BUILD_IMAGE
+      - echo $CODEBUILD_SOURCE_REPO_URL
+      - echo $CODEBUILD_SRC_DIR
   pre_build:    
     commands:      
       # Use Pre-Build phase to run tests, install any code deps or any other customization before build
