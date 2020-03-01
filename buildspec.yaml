@@ -22,6 +22,14 @@ phases:
       python: 3.8    
     commands:    
       - echo "Pre-Build Phase started - SAM Deployment"
+      - python --version
+      - ls -ltr # list directory contents from oldest to new
+      - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+      - python get-pip.py
+      - pip install --upgrade aws-sam-cli
+      - USER_BASE_PATH=$(python -m site --user-base) # save the path to the user's local packages folder to a variable (as opposed to the global packages folder)
+      - export PATH=$PATH:$USER_BASE_PATH/bin # add the user's local packages folder to PATH
+      - sam --version # verify "sam" can now be called        
   pre_build:    
     commands:      
       # Use Pre-Build phase to run tests, install any code deps or any other customization before build
