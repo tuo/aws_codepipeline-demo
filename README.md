@@ -76,6 +76,6 @@ https://stackoverflow.com/questions/53987204/is-it-possible-recommended-to-use-s
 possible speed up with provisioning with docker.cn registery ?
 https://docs.aws.amazon.com/codebuild/latest/userguide/sample-private-registry.html     
 
-![codebuild_phases.png](./screenshots/codebuild_phases.png)
-![jenkins](./screenshots/jenkins.png)
-![codebuild_log.png](./screenshots/codebuild_log.png)
+![codebuild_phases.png](https://user-images.githubusercontent.com/491610/75623822-2be29a80-5be9-11ea-9375-ef95f91bf59c.png)
+![jenkins](https://user-images.githubusercontent.com/491610/75623824-2c7b3100-5be9-11ea-9263-f94d86c1e8a7.png)
+![codebuild_log.png](https://user-images.githubusercontent.com/491610/75623821-2a18d700-5be9-11ea-90b7-65efebbaba2f.png)
