@@ -22,6 +22,17 @@ smoke test with aws codebuild, codepipeline and codedeploy, so later we could kn
 
 https://docs.aws.amazon.com/codedeploy/latest/userguide/tutorial-lambda-sam.html
 
+https://docs.aws.amazon.com/codebuild/latest/userguide/sample-codedeploy.html
+
+
+`How to build a CI/CD pipeline for Serverless apps with AWS CodePipeline and CodeBuild`: https://seed.run/blog/how-to-build-a-cicd-pipeline-for-serverless-apps-with-codepipeline-and-codebuild
+
+## SAM and CodeDeploy
+
+better reference to [AWS Serverless Application Model Document GUide on Deploy](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-deploying.html)
+
+Safe Lambda deployments: https://github.com/awslabs/serverless-application-model/blob/master/docs/safe_lambda_deployments.rst
+
 ## Deploy 
 
  
@@ -60,7 +71,8 @@ https://stackoverflow.com/questions/53987204/is-it-possible-recommended-to-use-s
 3. sam build on build stage (no need run against container)
 4. sam package in post build 
  
-     
+possible speed up with provisioning with docker.cn registery ?
+https://docs.aws.amazon.com/codebuild/latest/userguide/sample-private-registry.html     
 
 ![codebuild_phases.png](./screenshots/codebuild_phases.png)
 ![jenkins](./screenshots/jenkins.png)
