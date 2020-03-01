@@ -35,12 +35,10 @@ phases:
       # We package the SAM template and create `co` file that will be used in our pipeline for deployment
       ## Here we separate Build from Deployment and segregate permissions for different steps
       - echo "Starting SAM packaging `date` in `pwd`"
-      #- aws cloudformation package --template-file template.yaml --s3-bucket codepipeline-artifacts --output-template-file packaged.yaml
-      - USER_BASE_PATH=$(python -m site --user-base)
-      - export PATH=$PATH:$USER_BASE_PATH/bin
+      - sam --version
       - sam build
       - sam package --template-file template.yml --s3-bucket codepipeline-artifacts --output-template-file packaged.yml 
-      - sam deploy --template-file packaged.yaml --region cn-north-1 --capabilities CAPABILITY_IAM --stack-name tuo-build-demo1  --s3-bucket codepipeline-artifacts
+      # - sam deploy --template-file packaged.yaml --region cn-north-1 --capabilities CAPABILITY_IAM --stack-name tuo-build-demo1  --s3-bucket codepipeline-artifacts
   post_build:
     commands:
       # Use Post Build for notifications, git tags and any further customization after build
