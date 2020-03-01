@@ -21,7 +21,7 @@ phases:
     runtime-versions:
       python: 3.8    
     commands:    
-      - pip install -Iv aws-sam-cli=0.41.0
+      - pip install -Iv aws-sam-cli==0.41.0
       #- pip install aws-sam-cli  
   pre_build:    
     commands:      
