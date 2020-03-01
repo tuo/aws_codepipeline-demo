@@ -22,7 +22,7 @@ phases:
       python: 3.8    
     commands:    
       - echo "Pre-Build Phase started - SAM Deployment"
-      - python -m pip install --upgrade pip
+      - pip install --upgrade pip
       - pip --version
       - pip install https://files.pythonhosted.org/packages/2d/2c/291cc243b7e9de43a752608a8ad77a3c7dfdf0ffc5d3ce466ea28dc761e4/aws-sam-cli-0.41.0.tar.gz
       - sam --version # verify "sam" can now be called        
