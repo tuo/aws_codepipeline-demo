@@ -9,6 +9,9 @@ Description: >
 Globals:
   Function:
     Timeout: 3
+    AutoPublishAlias: live
+    DeploymentPreference:
+      Type: AllAtOnce
 
 Resources:
   HelloWorldFunction:
