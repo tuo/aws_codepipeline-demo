@@ -20,6 +20,8 @@ phases:
   install:
     runtime-versions:
       python: 3.8    
+    commands:
+      - pip install aws-sam-cli  
   pre_build:    
     commands:      
       # Use Pre-Build phase to run tests, install any code deps or any other customization before build
@@ -33,7 +35,12 @@ phases:
       # We package the SAM template and create `co` file that will be used in our pipeline for deployment
       ## Here we separate Build from Deployment and segregate permissions for different steps
       - echo "Starting SAM packaging `date` in `pwd`"
-      - aws cloudformation package --template-file template.yaml --s3-bucket codepipeline-artifacts --output-template-file packaged.yaml
+      #- aws cloudformation package --template-file template.yaml --s3-bucket codepipeline-artifacts --output-template-file packaged.yaml
+      - USER_BASE_PATH=$(python -m site --user-base)
+      - export PATH=$PATH:$USER_BASE_PATH/bin
+      - sam build
+      - sam package --template-file template.yml --s3-bucket codepipeline-artifacts --output-template-file packaged.yml 
+      - sam deploy --template-file packaged.yaml --region cn-north-1 --capabilities CAPABILITY_IAM --stack-name tuo-build-demo1  --s3-bucket codepipeline-artifacts
   post_build:
     commands:
       # Use Post Build for notifications, git tags and any further customization after build
@@ -45,6 +52,7 @@ phases:
 ##################################
 
 artifacts:
+  type: zip
   files:
     # list of local files relative to this build environment that will be added to the final artifact (zip)
     - packaged.yaml
