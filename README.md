@@ -33,6 +33,8 @@ better reference to [AWS Serverless Application Model Document GUide on Deploy](
 
 Safe Lambda deployments: https://github.com/awslabs/serverless-application-model/blob/master/docs/safe_lambda_deployments.rst
 
+sam build rebuild everytime: https://github.com/awslabs/aws-sam-cli/issues/805
+
 ## Deploy 
 
  
