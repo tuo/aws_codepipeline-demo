@@ -37,14 +37,14 @@ phases:
       # We package the SAM template and create `co` file that will be used in our pipeline for deployment
       ## Here we separate Build from Deployment and segregate permissions for different steps
       - echo "Starting SAM building `date` in `pwd`"      
-      - time sam build      
+      - sam build      
       - echo "done build"
       # - sam deploy --template-file packaged.yaml --region cn-north-1 --capabilities CAPABILITY_IAM --stack-name tuo-build-demo1  --s3-bucket codepipeline-artifacts
   post_build:
     commands:
       # Use Post Build for notifications, git tags and any further customization after build
       - echo "[Post-Build phase] Packaging..."
-      - time sam package --template-file template.yaml --s3-bucket codepipeline-artifacts --output-template-file packaged.yaml 
+      - sam package --template-file template.yaml --s3-bucket codepipeline-artifacts --output-template-file packaged.yaml 
       - echo "SAM packaging completed on `date`"
 
 ##################################
